@@ -1,172 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Driving Licence Payment</title>
-
-<!-- Lightbox CSS -->
-<link
-  href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.12.1/simple-lightbox.min.css"
-  rel="stylesheet"
-/>
-
-<style>
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f2f5;
-    margin: 20px;
-    color: #2f3542;
-  }
-
-  h1 {
-    text-align: center;
-    color: #e74c3c;
-    margin-bottom: 20px;
-  }
-
-  /* Image Gallery Grid */
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 15px;
-    max-width: 900px;
-    margin: 0 auto 40px auto;
-  }
-
-  .gallery a {
-    display: block;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .gallery a:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
-  }
-
-  .gallery img {
-    width: 100%;
-    display: block;
-  }
-
-  .gallery-caption {
-    text-align: center;
-    margin-top: 6px;
-    font-weight: 600;
-    color: #34495e;
-  }
-
-  table {
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto 30px auto;
-    border-collapse: collapse;
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  }
-
-  th, td {
-    padding: 14px 20px;
-    border-bottom: 1px solid #eee;
-    text-align: center;
-  }
-
-  thead {
-    background-color: #f6b8b8;
-    color: #800000;
-    font-weight: bold;
-  }
-
-  tfoot td {
-    background-color: #fff2f2;
-    font-weight: 700;
-    font-size: 1.1em;
-  }
-
-  button {
-    display: inline-block;
-    margin: 0 8px 20px 8px;
-    padding: 10px 25px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-weight: 600;
-  }
-
-  .btn-add {
-    background-color: #27ae60;
-    color: white;
-  }
-  .btn-add:hover {
-    background-color: #2ecc71;
-  }
-
-  .btn-download {
-    background-color: #2980b9;
-    color: white;
-  }
-  .btn-download:hover {
-    background-color: #3498db;
-  }
-
-  .btn-delete {
-    background-color: #c0392b;
-    color: white;
-    padding: 6px 12px;
-    font-size: 0.9rem;
-    border-radius: 4px;
-  }
-  .btn-delete:hover {
-    background-color: #e74c3c;
-  }
-
-  .footer {
-    text-align: center;
-    font-size: 14px;
-    color: #555;
-    margin-top: 50px;
-  }
-
-  /* Responsive for smaller screens */
-  @media (max-width: 600px) {
-    table, .gallery {
-      width: 100%;
-      max-width: 100%;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Driving Licence Payment</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.12.1/simple-lightbox.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma;
+      background-color: #f4f6f8;
+      margin: 20px;
+      color: #2f3542;
     }
-  }
-</style>
+
+    h1 {
+      text-align: center;
+      color: #e74c3c;
+      margin-bottom: 25px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      max-width: 900px;
+      margin: 0 auto 40px auto;
+    }
+
+    .gallery a {
+      display: block;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .gallery a:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .gallery img {
+      width: 100%;
+    }
+
+    table {
+      width: 100%;
+      max-width: 900px;
+      margin: auto;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #eee;
+      text-align: center;
+    }
+
+    thead {
+      background-color: #ffe0e0;
+    }
+
+    tfoot td {
+      font-weight: bold;
+      background-color: #fff5f5;
+    }
+
+    button {
+      margin: 6px;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .btn-add { background: #2ecc71; color: white; }
+    .btn-download { background: #3498db; color: white; }
+    .btn-delete { background: #e74c3c; color: white; }
+    .btn-edit { background: #f39c12; color: white; }
+
+    .footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
 
-<h1>🚗 Driving Licence Payment Record</h1>
+<h1>🚗 ড্রাইভিং লাইসেন্স পেমেন্ট রেকর্ড</h1>
 
-<!-- Image Gallery with Lightbox -->
-<div class="gallery" id="gallery">
+<!-- Photo Gallery -->
+<div class="gallery">
   <a href="Photos/printLearner-1.png" title="শিক্ষানবীশ লাইসেন্স">
-    <img src="Photos/printLearner-1.png" alt="Learner Licence" />
+    <img src="Photos/printLearner-1.png" alt="Learner" />
   </a>
-  <a href="Photos/printMoneyReceipt-1.png" title="মুদ্রিত রসিদ ১">
-    <img src="Photos/printMoneyReceipt-1.png" alt="Money Receipt 1" />
+  <a href="Photos/printMoneyReceipt-1.png" title="রসিদ ১">
+    <img src="Photos/printMoneyReceipt-1.png" alt="Receipt 1" />
   </a>
-  <a href="Photos/printMoneyReceipt-2.png" title="মুদ্রিত রসিদ ২">
-    <img src="Photos/printMoneyReceipt-2.png" alt="Money Receipt 2" />
+  <a href="Photos/printMoneyReceipt-2.png" title="রসিদ ২">
+    <img src="Photos/printMoneyReceipt-2.png" alt="Receipt 2" />
   </a>
 </div>
 
-<!-- Payments Table -->
+<!-- Payment Table -->
 <table>
   <thead>
     <tr>
       <th>বিবরণ</th>
       <th>টাকা (৳)</th>
-      <th>কর্ম</th>
+      <th>অ্যাকশন</th>
     </tr>
   </thead>
   <tbody id="tableBody"></tbody>
@@ -180,65 +129,73 @@
 </table>
 
 <!-- Buttons -->
-<div style="text-align:center;">
-  <button class="btn-add" onclick="addPayment()">➕ পেমেন্ট যোগ করুন</button>
+<div style="text-align:center; margin-top: 20px;">
+  <button class="btn-add" onclick="addPayment()">➕ নতুন পেমেন্ট</button>
   <button class="btn-download" onclick="downloadPDF()">⬇️ রসিদ ডাউনলোড (PDF)</button>
 </div>
 
 <!-- Footer -->
 <div class="footer">
-  &copy; 2025 Developer: <a href="https://cybercop-404.github.io/" target="_blank" style="color:#2980b9; text-decoration:none;">MD. NAHIDUL ISLAM</a>
+  &copy; 2025 - তৈরি করেছেন <strong>MD. Nahidul Islam</strong>
 </div>
 
-<!-- jsPDF and Lightbox scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<!-- Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.12.1/simple-lightbox.min.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script>
-  // Initialize Lightbox for gallery images
-  const lightbox = new SimpleLightbox('.gallery a', { captionsData: 'title', captionDelay: 250 });
-
-  // Payments data from localStorage
-  let payments = JSON.parse(localStorage.getItem("payments")) || [];
+  const lightbox = new SimpleLightbox('.gallery a');
+  let payments = JSON.parse(localStorage.getItem('payments')) || [];
 
   function renderTable() {
     const tbody = document.getElementById('tableBody');
     tbody.innerHTML = '';
     let total = 0;
 
-    payments.forEach((item, index) => {
-      total += parseFloat(item.amount);
-
+    payments.forEach((item, i) => {
       const tr = document.createElement('tr');
-      tr.innerHTML = `
-        <td>${item.desc}</td>
-        <td>৳${parseFloat(item.amount).toFixed(2)}</td>
-        <td><button class="btn-delete" onclick="confirmDelete(${index})">ডিলিট</button></td>
-      `;
+      tr.innerHTML = \`
+        <td>\${item.desc}</td>
+        <td>৳\${parseFloat(item.amount).toFixed(2)}</td>
+        <td>
+          <button class="btn-edit" onclick="editPayment(\${i})">✏️ এডিট</button>
+          <button class="btn-delete" onclick="deletePayment(\${i})">🗑️ ডিলিট</button>
+        </td>
+      \`;
       tbody.appendChild(tr);
+      total += parseFloat(item.amount);
     });
 
-    document.getElementById('totalAmount').innerText = `৳${total.toFixed(2)}`;
+    document.getElementById('totalAmount').innerText = '৳' + total.toFixed(2);
   }
 
   function addPayment() {
-    const desc = prompt("পেমেন্টের বিবরণ লিখুন:");
-    if (!desc) return alert("বিবরণ দিতে হবে।");
+    const desc = prompt("বিবরণ লিখুন:");
+    if (!desc) return;
 
-    let amount = prompt("টাকার পরিমাণ লিখুন (৳):");
-    if (!amount || isNaN(amount) || amount <= 0) return alert("সঠিক পরিমাণ দিন।");
+    let amount = prompt("টাকার পরিমাণ লিখুন:");
+    if (!amount || isNaN(amount)) return;
 
-    amount = parseFloat(amount).toFixed(2);
-
-    payments.push({ desc, amount });
-    localStorage.setItem("payments", JSON.stringify(payments));
+    payments.push({ desc, amount: parseFloat(amount) });
+    localStorage.setItem('payments', JSON.stringify(payments));
     renderTable();
   }
 
-  function confirmDelete(index) {
-    if (confirm("আপনি কি নিশ্চিতভাবে এই তথ্য মুছে ফেলতে চান?")) {
+  function editPayment(index) {
+    const item = payments[index];
+    const newDesc = prompt("নতুন বিবরণ:", item.desc);
+    if (!newDesc) return;
+    const newAmount = prompt("নতুন পরিমাণ:", item.amount);
+    if (!newAmount || isNaN(newAmount)) return;
+
+    payments[index] = { desc: newDesc, amount: parseFloat(newAmount) };
+    localStorage.setItem('payments', JSON.stringify(payments));
+    renderTable();
+  }
+
+  function deletePayment(index) {
+    if (confirm("আপনি কি নিশ্চিতভাবে মুছে ফেলতে চান?")) {
       payments.splice(index, 1);
-      localStorage.setItem("payments", JSON.stringify(payments));
+      localStorage.setItem('payments', JSON.stringify(payments));
       renderTable();
     }
   }
@@ -246,36 +203,27 @@
   async function downloadPDF() {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
-
-    doc.setFontSize(18);
-    doc.setTextColor(231, 76, 60);
+    doc.setFontSize(16);
+    doc.setTextColor(50, 50, 50);
     doc.text("Driving Licence Payment Receipt", 20, 20);
 
-    doc.setFontSize(12);
-    doc.setTextColor(44, 62, 80);
-
-    let y = 40;
-    let total = 0;
-
+    let y = 40, total = 0;
     payments.forEach((item, i) => {
-      doc.setFillColor(240, 248, 255);
-      doc.rect(15, y - 7, 180, 12, 'F');
-      doc.text(`${i + 1}. ${item.desc}`, 20, y);
-      doc.text(`৳${parseFloat(item.amount).toFixed(2)}`, 160, y);
+      doc.setFillColor(245, 245, 255);
+      doc.rect(15, y - 6, 180, 10, 'F');
+      doc.text(\`\${i + 1}. \${item.desc} - ৳\${parseFloat(item.amount).toFixed(2)}\`, 20, y);
       y += 15;
       total += parseFloat(item.amount);
     });
 
-    doc.setFillColor(255, 242, 242);
-    doc.rect(15, y - 7, 180, 12, 'F');
-    doc.setFontSize(14);
-    doc.setTextColor(192, 57, 43);
-    doc.text(`মোট: ৳${total.toFixed(2)}`, 20, y);
+    doc.setFillColor(255, 230, 230);
+    doc.rect(15, y - 6, 180, 10, 'F');
+    doc.setTextColor(200, 0, 0);
+    doc.text("মোট: ৳" + total.toFixed(2), 20, y);
 
-    doc.save("Driving_Licence_Receipt.pdf");
+    doc.save("Payment_Receipt.pdf");
   }
 
-  // Initial render
   renderTable();
 </script>
 </body>
